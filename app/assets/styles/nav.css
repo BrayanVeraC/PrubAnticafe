@@ -1,0 +1,106 @@
+.nav-container{
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+}
+  .filter{
+    width: 90%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: rgb(250 250 250/0.4);
+    backdrop-filter: blur(10px);
+  }
+  nav.main{
+    width: 90%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 2;
+  }
+    img.logo{
+      position: absolute;
+      top: 8px;
+      left: 25px;
+      width: 150px;
+      height: 50px;
+    }
+    input#active{
+      display: none;
+    }
+    #active:checked ~ .wrapper{
+      clip-path: circle(75%);
+      top: 0;
+      left: 0;
+    }
+    .menu-btn{
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      z-index: 2;
+      text-align: center;
+      line-height: 50px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      background: brown;
+      transition: all 0.3 ease;
+    }
+    #active:checked ~ .menu-btn{
+      background: #fff;
+      color: brown;
+    }
+    .wrapper{
+      position: fixed;
+      top: -3px;
+      left: -7px;
+      height: 100%;
+      width: 100%;
+      background: brown;
+      clip-path: circle(25px at calc(100% - 45px)40px);
+      transition: all 0.3 ease-in-out;
+    }
+      .wrapper ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+      }
+        .wrapper ul li{
+          margin: 70px 0;
+        }
+          .wrapper ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 500;
+            padding: 10px 20px;
+            position: relative;
+            line-height: 50px;
+            transition: all 0.3s ease;
+          }
+          .wrapper ul li a:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            border-radius: 50px;
+            transform: scaleY(0);
+            z-index: -1;
+            transition: transform 0.3s ease;
+          }
+          .wrapper ul li a:hover:after{
+            transform: scaleY(1);
+          }
+          .wrapper ul li a:hover{
+            color: brown ;
+          }
