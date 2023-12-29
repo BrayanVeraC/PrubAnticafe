@@ -15,17 +15,17 @@ const Routes = {
         description: ""
     },
     "/": {
-        template: "/app/home/index.html",
+        template: "./app/home/index.html",
         title: "",
         description: ""
     },
     "/galeria": {
-        template: "/app/galeria/index.html",
+        template: "./app/galeria/index.html",
         title: "",
         description: ""
     },
     "/nosotros": {
-        template: "/app/nosotros/index.html",
+        template: "./app/nosotros/index.html",
         title: "",
         description: ""
     }
